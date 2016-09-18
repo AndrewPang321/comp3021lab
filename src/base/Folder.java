@@ -22,17 +22,7 @@ public class Folder {
 	public List<Note> getNotes() {
 		return notes;
 	}
-//	@Override
-//	public boolean equals(Object obj) {
-//		// traverse all the notes to determine if the note is already existed
-//		for (Note n1 : notes) {
-//			if (obj instanceof Note)
-//				if (n1.getTitle() == ((Note)obj).title) {
-//					return true;
-//				}
-//		}
-//		return false;
-//	}
+
 	public String toString() {
 		//TODO: Count the number of textnote and imagenote in a folder
 		int tNote = 0, iNote = 0;
