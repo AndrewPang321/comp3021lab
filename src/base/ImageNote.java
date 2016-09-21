@@ -7,11 +7,8 @@ public class ImageNote extends Note{
 	private File image;
 	
 	// member functions
-	public ImageNote(String noteContent) {
-		super(noteContent);
-		// Create a File object with the string noteContent (Conversion constructor)
-		File file = new File(noteContent);
-		setImage(file);
+	public ImageNote(String title) {
+		super(title);
 	}
 	public File getIamge() {
 		return image;

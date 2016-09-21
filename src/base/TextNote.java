@@ -5,8 +5,11 @@ public class TextNote extends Note{
 	private String content;
 	
 	// member function
-	public TextNote(String noteContent) {
-		super(noteContent);
+	public TextNote(String title) {
+		super(title);
+	}
+	public TextNote(String title, String noteContent) {
+		super(title);
 		setContent(noteContent);
 	}
 	public String getContent() {

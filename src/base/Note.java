@@ -1,15 +1,16 @@
 package base;
 
+import java.util.Collections;
 import java.util.Date;
 
-public class Note {
+public class Note implements Comparable<Note>{
 	// Data member
-	protected Date date;
-	protected String title;
+	private Date date;
+	private String title;
 	
 	// Member function
-	public Note(String titleName) {
-		title = titleName;
+	public Note(String title) {
+		this.title = title;
 		date = new Date(System.currentTimeMillis());
 	}
 	public String getTitle() {
@@ -37,6 +38,22 @@ public class Note {
 		} else if (!title.equals(other.title))
 			return false;
 		return true;
+	}
+	@Override
+	public int compareTo(Note o) {
+		// TODO Auto-generated method stub
+		// 1. this obj's date is bigger than input obj's date
+		if (this.date.before(o.date))
+			return 1;
+		// 2. this obj's date is smaller than input obj's date
+		else if (this.date.after(o.date))
+			return -1;
+		// 3. otherwise, it is equal
+		else
+			return 0;
+	}
+	public String toString() {
+		return date.toString() + "\t" + title;
 	}
 }
 
