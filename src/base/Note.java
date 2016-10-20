@@ -2,11 +2,13 @@ package base;
 
 import java.util.Collections;
 import java.util.Date;
+import java.io.Serializable;
 
-public class Note implements Comparable<Note>{
+public class Note implements Comparable<Note>, Serializable{
 	// Data member
 	private Date date;
 	private String title;
+	private static final long serialVersionUID = 1L;
 	
 	// Member function
 	public Note(String title) {
